@@ -1,0 +1,32 @@
+prename=192.168.1
+server_id=192.168.1.238
+start=40
+finish=50
+server_listen_port=5188
+client_listen_port=5152
+server_warning_port=5189
+server_short_listen=5187
+
+
+file_log0=./Log/Mem.log
+file_log1=./Log/Disk.log
+file_log2=./Log/Cpu.log
+file_log3=./Log/User.log
+file_log4=./Log/Sys.log
+file_log5=./Log/Male.log
+
+script_name0=bash ./shell/mem_info.sh 10
+script_name1=bash ./shell/disk_info.sh
+script_name2=bash ./shell/cpu_info.sh
+script_name3=bash ./shell/user_info.sh
+script_name4=bash ./shell/sys_info.sh
+script_name5=bash ./shell/male_info.sh
+
+sleep0=10
+sleep1=60
+sleep2=5
+sleep3=20
+sleep4=5
+sleep5=5
+
+
