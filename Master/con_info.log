@@ -1,0 +1,8 @@
+prename=192.168.1
+server_id=192.168.1.238
+start=40
+finish=50
+server_listen_port=5188
+client_listen_port=5152
+server_warning_port=5189
+server_short_listen=5187
