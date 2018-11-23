@@ -1,0 +1,25 @@
+#!/bin/bash
+if [[ ! -e /etc/pihealth_zhushuo/pihealth_zhushuo.pid ]]; then
+    touch /etc/pihealth_zhushuo.pid
+fi
+
+pid=`cat /etc/pihealth_zhushuo/pihealth_zhsuhuo.pid`
+
+if test -n $pid ;then
+	ps -ef | grep -w ${pid} | grep master > /dev/null
+	if [[ $? == 0 ]]; then
+		echo "Piheath has alreadly started."
+		exit 0
+	else 
+		echo "Piheath is starting"
+		/etc/pihealth_zhushuo/master
+		echo "Piheath started."
+	fi
+else
+	echo "Pihealth is starning."
+	/etc/pihealth_zhushuo/master
+	echo "Pihealth started."
+fi
+
+#pid=`ps -ef | awk '{if ($8 == "") print $2}'`
+#echo $pid > /etc/pihealth_zhushuo.pid
