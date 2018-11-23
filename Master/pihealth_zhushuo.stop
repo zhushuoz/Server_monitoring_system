@@ -1,0 +1,4 @@
+#!/bin/bash
+pid=`cat /etc/pihealth_zhushuo/pihealth_zhushuo.pid`
+kill ${pid}
+
