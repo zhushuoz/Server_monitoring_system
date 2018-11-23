@@ -1,0 +1,14 @@
+[Unit]
+Description=pihealth_zhushuo-1.0
+After=syslog.target network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+PIDFile=/etc/pihealth_zhushuo/pihealth_zhushuo.pid
+ExecStart=/etc/pihealth_zhushuo/pihealth_zhushuo.start
+ExecStop=/etc/pihealth_zhushuo/pihealth_zhushuo.stop
+
+[Install]
+WantedBy=multi-user.target
+
+
